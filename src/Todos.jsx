@@ -3,8 +3,6 @@ function Todos() {
   return (
     <ul>
       <Li />
-      <Li />
-      <Li />
     </ul>
   )
 }

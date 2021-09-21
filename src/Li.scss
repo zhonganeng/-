@@ -1,0 +1,20 @@
+.li {
+  .dataList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .MuiListItem-padding {
+      padding: 0 !important;
+    }
+    .left {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .liItem:hover .cancel {
+    display: block;
+  }
+  .cancel {
+    display: none;
+  }
+}
