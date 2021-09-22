@@ -1,9 +1,9 @@
 import TextField from '@material-ui/core/TextField';
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useState } from 'react'
 function Create() {
   const dispatch = useDispatch();
-  const list = useSelector(state => state.list);
+  // const list = useSelector(state => state.list);
 
   // let [focusState, setFocusState] = useState(true);
   let [inputValue, setInputValue] = useState('');
@@ -26,7 +26,7 @@ function Create() {
               dispatch({
                 type: "AddTodos",
                 addObj: {
-                  id: list.length,
+                  id: Math.random() + 1,
                   name: inputValue,
                   isSelect: false,
                   isEdit: false

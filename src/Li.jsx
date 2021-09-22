@@ -20,7 +20,7 @@ function Li() {
               <ListItem
                 className="liItem"
                 button
-                key={index}
+                key={item.id}
                 style={{
                   padding: 0,
                 }}

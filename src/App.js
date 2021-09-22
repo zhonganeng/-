@@ -24,7 +24,7 @@ export default function App() {
       <Title />
       <Create />
       <Li />
-      <State todos={todos} done={done} />
+      <State className="box" todos={todos} done={done} />
     </PhoneBox>
   );
 }
