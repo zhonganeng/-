@@ -75,7 +75,6 @@ function Li() {
                 id="standard-basic"
                 onBlur={() => {
                   dispatch({ type: 'Edit' })
-                  console.log(alertValue);
                   if (alertValue !== '') {
                     dispatch({ type: 'AlertValue', id: item.id, name: alertValue })
                   }
@@ -83,7 +82,7 @@ function Li() {
                 style={{
                   width: '100%'
                 }}
-                onKeyDown={(e) => {
+                onChange={(e) => {
                   if (e.target.value !== '') {
                     alertValue = e.target.value;
                   }

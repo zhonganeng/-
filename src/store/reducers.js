@@ -40,6 +40,7 @@ export default function reducer(
       return { list: editObj };
     case "AlertValue":
       let newVal = [];
+      console.log(action.name);
       state.list.forEach((item) => {
         if (item.id === action.id) {
           item.name = action.name;

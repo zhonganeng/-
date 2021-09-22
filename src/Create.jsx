@@ -5,28 +5,35 @@ function Create() {
   const dispatch = useDispatch();
   const list = useSelector(state => state.list);
 
-  let [focusState, setFocusState] = useState(false);
+  // let [focusState, setFocusState] = useState(true);
+  let [inputValue, setInputValue] = useState('');
   return (
     <>
       <TextField
-        autoFocus={focusState}
+        value={inputValue}
+        // autoFocus={focusState}
         id="standard-basic"
         label="请输入要完成的事项"
         style={{
           width: '100%'
-        }} onKeyDown={(e) => {
+        }}
+        onChange={(e) => {
+          setInputValue(e.target.value)
+        }}
+        onKeyDown={(e) => {
           if (e.key === "Enter") {
             if (e.target.value !== '') {
               dispatch({
                 type: "AddTodos",
                 addObj: {
                   id: list.length,
-                  name: e.target.value,
+                  name: inputValue,
                   isSelect: false,
                   isEdit: false
                 }
               })
-              setFocusState(false);
+              setInputValue('')
+              // setFocusState(false)
             }
           }
         }}
