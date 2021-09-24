@@ -80,7 +80,7 @@ function Li() {
                   }
                 }}
                 style={{
-                  width: '100%'
+                  width: '100%',
                 }}
                 onChange={(e) => {
                   if (e.target.value !== '') {

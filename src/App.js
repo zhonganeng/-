@@ -5,6 +5,7 @@ import Li from "./Li";
 import PhoneBox from "./Phone";
 import State from "./State";
 import { useSelector } from "react-redux";
+import { HashRouter } from "react-router-dom";
 export default function App() {
   const state = useSelector((state) => state);
   let todos = "",
@@ -20,11 +21,13 @@ export default function App() {
     }
   });
   return (
-    <PhoneBox>
-      <Title />
-      <Create />
-      <Li />
-      <State className="box" todos={todos} done={done} />
-    </PhoneBox>
+    <HashRouter>
+      <PhoneBox>
+        <Title />
+        <Create />
+        <Li />
+        <State className="box" todos={todos} done={done} />
+      </PhoneBox>
+    </HashRouter>
   );
 }

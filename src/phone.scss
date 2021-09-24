@@ -26,5 +26,6 @@
   height: 100%;
   padding: 20px 10px;
   background-color: #fff;
-  overflow: auto;
+  max-height: 100%;
+  overflow: hidden;
 }

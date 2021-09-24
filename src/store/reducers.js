@@ -8,7 +8,6 @@ export default function reducer(
     case "AddTodos":
       return { list: [...state.list, action.addObj] };
     case "DelTodos":
-      console.log(action);
       return { list: state.list.filter((item) => item.id !== action.id) };
     case "SetSelect":
       let obj = [];
@@ -40,7 +39,6 @@ export default function reducer(
       return { list: editObj };
     case "AlertValue":
       let newVal = [];
-      console.log(action.name);
       state.list.forEach((item) => {
         if (item.id === action.id) {
           item.name = action.name;
