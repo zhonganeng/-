@@ -1,4 +1,9 @@
 .li {
+  overflow-y: auto;
+  margin-bottom: 20px;
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
   .dataList {
     display: flex;
     align-items: center;
@@ -16,5 +21,11 @@
   }
   .cancel {
     display: none;
+  }
+  .liItem:last-child {
+    margin-bottom: 10px;
+    #standard-basic {
+      margin-bottom: 10px;
+    }
   }
 }

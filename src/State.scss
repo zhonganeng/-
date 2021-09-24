@@ -1,6 +1,11 @@
 .state {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 6px 0;
+  padding: 10px;
   font-size: 14px;
+  box-sizing: border-box;
 }
