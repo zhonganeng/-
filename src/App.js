@@ -3,6 +3,7 @@ import Title from "./Title";
 import Create from "./Create";
 import Li from "./Li";
 import PhoneBox from "./Phone";
+import Test from "./Test";
 import State from "./State";
 import { useSelector } from "react-redux";
 import { HashRouter } from "react-router-dom";
@@ -27,6 +28,7 @@ export default function App() {
         <Create />
         <Li />
         <State className="box" todos={todos} done={done} />
+        {/* <Test val="jjj">test</Test> */}
       </PhoneBox>
     </HashRouter>
   );
