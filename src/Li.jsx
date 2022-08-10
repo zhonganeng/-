@@ -14,6 +14,8 @@ function Li() {
     <div className="li">
       {/* 数据 */}
       {
+        state.list.length>0
+        ?
         state.list.map((item, index) => {
           return (
             !item.isEdit ?
@@ -89,7 +91,12 @@ function Li() {
                 }}
               />
           )
-        })}
+        })
+        :
+        <div>
+          暂无代办！
+        </div>
+      }
     </div >
   )
 }
